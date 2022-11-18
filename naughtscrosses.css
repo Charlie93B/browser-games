@@ -1,0 +1,153 @@
+/* CSS Variables*/
+
+:root {
+    --page-wrapper-width: 60%;
+}
+
+
+/* Global CSS */
+
+* {
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    color: white;
+    background-color: darkslategray;
+}
+
+/*Tags CSS*/
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    width: var(--page-wrapper-width);
+    justify-content: space-between;
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Class CSS*/
+
+.noclick {
+    pointer-events: none;
+}
+
+/*Navigation CSS*/
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+    border-radius: 5px;
+}
+
+.hamburger div {
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 3px;
+    background-color: black;
+}
+
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    padding: 12.5px;
+    color: lightgreen;
+    margin: auto;
+}
+
+a:hover {
+    border-bottom: 3px solid lightgreen;
+}
+
+/*Naughts and Crosses game grid*/
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    width: var(--page-wrapper-width);
+    justify-content: center;
+}
+
+.game-container h2 {
+    margin: 30px 0px;
+}
+
+.o-x-game-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 30% 30% 30%;
+    height: 30vw;
+    justify-content: center;
+}
+
+.o-x-game-grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    height: 100%;
+    width: 100%;
+}
+
+#win-message {
+    font-size: 2rem;
+    color: red;
+}
+
+#reset {
+    background-color: slategray;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: grab;
+}
+
+/* Responsive Ipad*/
+
+@media (max-width: 950px) {
+    :root {
+        --page-wrapper-width: 85%;
+    }
+}
+
+
+/*Responsive Iphone*/
+
+@media  (max-width: 650px) {
+    :root {
+        --page-wrapper-width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
